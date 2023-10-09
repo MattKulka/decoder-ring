@@ -4,7 +4,6 @@
 // of the anonymous function on line 6
 
 const caesarModule = (function () {
-  // you can add any code you want within this function scope
 
   function caesar(input, shift, encode = true) {
   let alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -47,7 +46,7 @@ const caesarModule = (function () {
 }
 
 function decode(input, shift) {
-  
+  // Check if the shift value is valid
   if (!shift || shift === 0 || shift < -25 || shift > 25) {
     return false;
   }

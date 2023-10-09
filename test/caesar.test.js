@@ -49,7 +49,7 @@ describe("caesarModule", () => {
   describe("decode()", () => {
     it("should decode spider-mans name with a positive shift", () => {
       const input = "pmfabo-jxk";
-      const shift = 3;
+      const shift = -3;
       const expectedOutput = "spider-man";
 
       const actualOutput = caesarModule.decode(input, shift);
@@ -59,7 +59,7 @@ describe("caesarModule", () => {
 
     it("should decode a spider-mans with a negative shift", () => {
       const input = "vslghu-pdq";
-      const shift = -3;
+      const shift = 3;
       const expectedOutput = "spider-man";
 
       const actualOutput = caesarModule.decode(input, shift);
@@ -69,7 +69,7 @@ describe("caesarModule", () => {
 
     it("should handle non-alphabetic characters", () => {
       const input = "pmfabo-jxk 123";
-      const shift = 3;
+      const shift = -3;
       const expectedOutput = "spider-man 123";
 
       const actualOutput = caesarModule.decode(input, shift);
